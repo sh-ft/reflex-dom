@@ -110,8 +110,7 @@ virtualList heightPx rowPx maxIndex i0 setI keyToIndex items0 itemsUpdate itemBu
     mkViewport h = toStyleAttr $ "overflow" =: "auto" <> "position" =: "absolute" <>
                                  "left" =: "0" <> "right" =: "0" <> "height" =: (T.pack (show h) <> "px")
     mkContainer h = toStyleAttr $ "position" =: "relative" <> "height" =: (T.pack (show h) <> "px")
-    mkVirtualHeight h = let h' = h * rowPx --TODO: test the use of this
-                        in toStyleAttr $ "height" =: (T.pack (show h') <> "px") <>
+    mkVirtualHeight h = toStyleAttr $ "height" =: (T.pack (show h) <> "px") <>
                                          "overflow" =: "hidden" <>
                                          "position" =: "relative"
     mkRow k = toStyleAttr $ "height" =: (T.pack (show rowPx) <> "px") <>
